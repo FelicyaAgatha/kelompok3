@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - StudyTrack</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="registerstyle.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="left-content">
+      <h1>StudyTrack</h1>
+      <p>Mulai perjalanan belajarmu sekarang 🚀</p>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="card">
+
+      <h2>Daftar Akun</h2>
+      <p class="subtitle">Buat akun untuk mulai belajar</p>
+
+      <div class="input-group">
+        <label>Nama</label>
+        <div class="input-box">
+          <span>👤</span>
+          <input type="text" id="nama" placeholder="Nama lengkap">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <div class="input-box">
+          <span>📧</span>
+          <input type="email" id="email" placeholder="Email">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <div class="input-box">
+          <span>🔒</span>
+          <input type="password" id="password" placeholder="Password">
+        </div>
+      </div>
+
+      <button class="btn" onclick="register()">Daftar</button>
+
+      <div class="divider">atau</div>
+
+      <button class="google-btn" onclick="loginGoogle()">Daftar dengan Google</button>
+
+      <div class="login-link">
+        Sudah punya akun? <a href="login.html">Login</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+function register(){
+  const nama = document.getElementById("nama").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if(nama && email && password){
+    localStorage.setItem("isLogin","true");
+    localStorage.setItem("nama", nama);
+    window.location.href = "index.html";
+  } else {
+    alert("Semua field wajib diisi!");
+  }
+}
+
+function loginGoogle(){
+  localStorage.setItem("isLogin","true");
+  localStorage.setItem("nama","User Google");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

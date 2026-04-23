@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - StudyTrack</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="overlay"></div>
+
+    <div class="left-content">
+      <h1>StudyTrack</h1>
+      <p>Belajar lebih terarah dan capai targetmu setiap hari 🚀</p>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="card">
+
+      <h2>Selamat Datang 👋</h2>
+      <p class="subtitle">Masuk untuk melanjutkan</p>
+
+      <div class="input-group">
+        <label>Email</label>
+        <div class="input-box">
+          <span>📧</span>
+          <input type="email" id="email" placeholder="Masukkan email">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Password</label>
+        <div class="input-box">
+          <span>🔒</span>
+          <input type="password" id="password" placeholder="Masukkan password">
+        </div>
+      </div>
+
+      <div class="forgot">
+        <a href="#">Lupa password?</a>
+      </div>
+
+      <button class="btn" onclick="login()">Login</button>
+
+      <div class="divider">atau</div>
+
+      <button class="google-btn">Login dengan Google</button>
+
+      <div class="signup">
+        Belum punya akun? <a href="register.html">Daftar</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+function login(){
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if(email && password){
+    localStorage.setItem("isLogin","true");
+    window.location.href = "index.html";
+  } else {
+    alert("Isi email & password!");
+  }
+}
+</script>
+
+</body>
+</html>
