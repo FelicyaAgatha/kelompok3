@@ -3,35 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyTrack Dashboard</title>
+  <title>Dashboard - StudyTrack</title>
   <link rel="stylesheet" href="../css/styleindex.css">
 </head>
 <body>
-
 <div class="container">
   
- 
-  <div class="sidebar">
+  <aside class="sidebar">
     <h2>StudyTrack</h2>
     <ul>
-      <li class="active">Dashboard</li>
-      <li><a href="materi.html">Materi</a></li>
+      <li class="active"><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html">Login</a></li>
       <li><a href="profil.html">Profil</a></li>
     </ul>
-  </div>
+  </aside>
 
-  <div class="main">
-    <h1>Halo, Felicya!</h1>
+  <main class="content">
+    <h1>Dashboard</h1>
+    <p>Halo, Felicya Semangat belajar hari ini!</p>
 
     <div class="cards">
       <div class="card">
         <h3>Progress Belajar</h3>
-        <p class="big">75%</p>
+        <p><strong>75%</strong> selesai</p>
       </div>
 
       <div class="card">
         <h3>Total Jam Belajar</h3>
-        <p class="big">8 Jam</p>
+        <p><strong>8 Jam</strong> dari target 10 jam</p>
       </div>
 
       <div class="card">
@@ -39,18 +38,27 @@
         <p>Senin - Minggu</p>
       </div>
     </div>
-
+    
     <div class="schedule">
       <h3>Jadwal Hari Ini</h3>
       <ul>
-        <li>10:00 - Pemrograman OOP</li>
-        <li>13:00 - Matematika Diskrit</li>
-        <li>16:00 - Desain Grafis</li>
+
       </ul>
     </div>
 
-  </div>
-</div>
+    <div class="schedule">
+      <ul>
+      10:00 - 11:00 Pemrograman Berorientasi Objek
+      </ul>
+    </div>
 
+     <div class="schedule">
+      <ul>
+      11:00 - 12:00 Matematika
+      </ul>
+    </div>
+
+  </main>
+</div>
 </body>
 </html>
